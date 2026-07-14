@@ -13,6 +13,8 @@ RUN npm ci --omit=dev
 #after installing dependecies , copy the rest project
 COPY . .
 
+RUN npx prisma generate
+
 # Express listening port is 3000
 EXPOSE 3000
 
